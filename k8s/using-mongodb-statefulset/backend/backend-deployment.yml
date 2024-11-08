@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-node-backend
-          image: umangrathi110/backend-image:1.0
+          image: bhanuprasad078/nodejs-backend:latest
           ports:
             - containerPort: 5000
           resources:

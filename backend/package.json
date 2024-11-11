@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon app.js",           // Run app.js with nodemon
+    "build": "babel-node app.js",        // Compile and run app.js directly with babel-node
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,5 +17,12 @@
     "mongodb": "^6.5.0",
     "mongoose": "^7.6.9",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",           // Core Babel functionality
+    "@babel/cli": "^7.22.0",            // Babel CLI to run Babel from the command line
+    "@babel/preset-env": "^7.22.0",      // Babel preset for compiling modern JS to ES5
+    "@babel/node": "^7.22.0"            // Babel Node for running JS with Babel and showing output in the terminal
   }
 }
+

@@ -21,5 +21,3 @@ spec:
           resources:
             requests:
               memory: "256Mi" # Request 256 megabytes of memory
-            limits:
-              memory: "512Mi" # Limit to 512 megabytes of memory

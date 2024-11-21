@@ -1,5 +1,5 @@
 # Stage 1: Build React Application
-FROM node:20.5.1-slim
+FROM node:20.5.1-slim AS build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -19,11 +19,13 @@ RUN npm run build
 # Stage 2: Serve React Application using Nginx
 FROM nginx:alpine
 
-# Copy the built React application to the Nginx server directory
+# Copy the built React application from the build stage to the Nginx server directory
 COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
+
 # Expose port 80 to the outside world
 EXPOSE 80
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
+

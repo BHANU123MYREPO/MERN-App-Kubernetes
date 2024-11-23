@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install Node.js dependencies
-RUN npm install
+RUN npm install -g 
 
 # Copy the rest of your application code to the working directory
 COPY . .

@@ -16,5 +16,5 @@ COPY . .
 # Expose the port your app runs on
 EXPOSE 5000
 
-# Define the command to run your app.
+# Define the command to run your app...
 CMD ["node", "app.js"]
